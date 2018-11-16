@@ -34,11 +34,12 @@ for(nm in names(dny)) {
 # lze i dny <- map_df(dny, ~map_chr(.x, str_squish))
 tab.opr <- cbind.data.frame(tab, dny) %>% # sloučí pův. a výslednou tabulku
   select(-c("UREDNI_HODINY", "X13")) # smaže nepotřebné sloupce
-write.csv2(tab.opr, "vsechny_uradovny_opr2.csv", fileEncoding = "windows-1250", row.names = F, na = "") # uloží do CSV,
+write.csv2(tab.opr, "vsechny_uradovny_opr.csv", fileEncoding = "windows-1250", row.names = F, na = "") # uloží do CSV,
   # NA jako prázdné buňky
 
 # DODĚLAT
 # kontrola struktury otevíracích hodin (vždy Den: hh:hh ?)
+# kontrola na jiném souboru
 
 ## HOTOVO
 # kontrola pořadí otevíracích hodin - ok
